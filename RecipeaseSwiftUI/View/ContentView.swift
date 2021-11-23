@@ -9,9 +9,28 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "Lightgrey")
+    }
 
     var body: some View {
-        Text("Hello World!")
+        TabView {
+            
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
+            
+            Text("Favorites")
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("Favorites")
+                }
+            
+        }
+        .accentColor(Color(.green))
     }
 }
 
