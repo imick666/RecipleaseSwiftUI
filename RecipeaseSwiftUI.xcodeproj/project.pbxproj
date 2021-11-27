@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		E0277C46274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0277C45274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift */; };
 		E0277C48274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */; };
+		E02D54FA2752708B00051C34 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54F92752708B00051C34 /* NetworkClient.swift */; };
+		E02D54FC275271A500051C34 /* EdamanDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54FB275271A500051C34 /* EdamanDataModel.swift */; };
+		E02D54FE275272CE00051C34 /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E02D54FD275272CE00051C34 /* EdamamData.json */; };
+		E02D55002752732E00051C34 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54FF2752732E00051C34 /* FakeData.swift */; };
+		E02D55022752742200051C34 /* EdamamFakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55012752742200051C34 /* EdamamFakeData.swift */; };
+		E02D55042752767D00051C34 /* FakeApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55032752767D00051C34 /* FakeApiConfig.swift */; };
+		E02D5506275277C000051C34 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D5505275277C000051C34 /* NetworkSession.swift */; };
+		E02D55082752796C00051C34 /* FakeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55072752796C00051C34 /* FakeNetworkService.swift */; };
 		E04119C4274B832400848D2E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04119C3274B832400848D2E /* SearchView.swift */; };
 		E04119C8274B91AA00848D2E /* Color+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04119C7274B91AA00848D2E /* Color+Init.swift */; };
 		E0493D8E2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493D8D2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift */; };
@@ -22,7 +30,6 @@
 		E0493DB02742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493DAF2742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift */; };
 		E0493DBD2742938D00BE2BA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E0493DBC2742938D00BE2BA1 /* .gitignore */; };
 		E0493DC3274293CC00BE2BA1 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */; };
-		E0493DC52742A2E700BE2BA1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493DC42742A2E700BE2BA1 /* NetworkService.swift */; };
 		E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +53,14 @@
 /* Begin PBXFileReference section */
 		E0277C45274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeRoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		E02D54F92752708B00051C34 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		E02D54FB275271A500051C34 /* EdamanDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamanDataModel.swift; sourceTree = "<group>"; };
+		E02D54FD275272CE00051C34 /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
+		E02D54FF2752732E00051C34 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		E02D55012752742200051C34 /* EdamamFakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamFakeData.swift; sourceTree = "<group>"; };
+		E02D55032752767D00051C34 /* FakeApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiConfig.swift; sourceTree = "<group>"; };
+		E02D5505275277C000051C34 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		E02D55072752796C00051C34 /* FakeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkService.swift; sourceTree = "<group>"; };
 		E04119C3274B832400848D2E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E04119C7274B91AA00848D2E /* Color+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Init.swift"; sourceTree = "<group>"; };
 		E0493D8A2742936700BE2BA1 /* RecipeaseSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeaseSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +77,6 @@
 		E0493DAF2742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeaseSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0493DBC2742938D00BE2BA1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
-		E0493DC42742A2E700BE2BA1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +112,53 @@
 				E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */,
 			);
 			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		E02D5509275286D300051C34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E02D5505275277C000051C34 /* NetworkSession.swift */,
+				E02D54F92752708B00051C34 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E02D550A275286DD00051C34 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */,
+				E02D54FB275271A500051C34 /* EdamanDataModel.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		E02D550B275286F500051C34 /* Moke */ = {
+			isa = PBXGroup;
+			children = (
+				E02D54FF2752732E00051C34 /* FakeData.swift */,
+				E02D55032752767D00051C34 /* FakeApiConfig.swift */,
+				E02D55072752796C00051C34 /* FakeNetworkService.swift */,
+			);
+			path = Moke;
+			sourceTree = "<group>";
+		};
+		E02D550C275286FD00051C34 /* Edamam */ = {
+			isa = PBXGroup;
+			children = (
+				E02D55012752742200051C34 /* EdamamFakeData.swift */,
+				E0493DA32742936900BE2BA1 /* RecipeaseSwiftUITests.swift */,
+				E02D54FD275272CE00051C34 /* EdamamData.json */,
+			);
+			path = Edamam;
+			sourceTree = "<group>";
+		};
+		E02D550D2752870F00051C34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E02D550C275286FD00051C34 /* Edamam */,
+				E02D550B275286F500051C34 /* Moke */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E04119C5274B919100848D2E /* Extensions */ = {
@@ -153,7 +214,7 @@
 		E0493DA22742936900BE2BA1 /* RecipeaseSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E0493DA32742936900BE2BA1 /* RecipeaseSwiftUITests.swift */,
+				E02D550D2752870F00051C34 /* Network */,
 			);
 			path = RecipeaseSwiftUITests;
 			sourceTree = "<group>";
@@ -188,8 +249,8 @@
 		E0493DC0274293A200BE2BA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */,
-				E0493DC42742A2E700BE2BA1 /* NetworkService.swift */,
+				E02D550A275286DD00051C34 /* Api */,
+				E02D5509275286D300051C34 /* Network */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02D54FE275272CE00051C34 /* EdamamData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,16 +398,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02D54FA2752708B00051C34 /* NetworkClient.swift in Sources */,
 				E04119C4274B832400848D2E /* SearchView.swift in Sources */,
 				E0277C46274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */,
 				E04119C8274B91AA00848D2E /* Color+Init.swift in Sources */,
 				E0493DC3274293CC00BE2BA1 /* ApiConfig.swift in Sources */,
+				E02D54FC275271A500051C34 /* EdamanDataModel.swift in Sources */,
 				E0493D972742936800BE2BA1 /* Persistence.swift in Sources */,
+				E02D5506275277C000051C34 /* NetworkSession.swift in Sources */,
 				E0277C48274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift in Sources */,
 				E0493D9A2742936800BE2BA1 /* RecipeaseSwiftUI.xcdatamodeld in Sources */,
 				E0493D902742936700BE2BA1 /* ContentView.swift in Sources */,
 				E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */,
-				E0493DC52742A2E700BE2BA1 /* NetworkService.swift in Sources */,
 				E0493D8E2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0493DA42742936900BE2BA1 /* RecipeaseSwiftUITests.swift in Sources */,
+				E02D55042752767D00051C34 /* FakeApiConfig.swift in Sources */,
+				E02D55022752742200051C34 /* EdamamFakeData.swift in Sources */,
+				E02D55002752732E00051C34 /* FakeData.swift in Sources */,
+				E02D55082752796C00051C34 /* FakeNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

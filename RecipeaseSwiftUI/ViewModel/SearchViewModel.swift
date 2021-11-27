@@ -11,8 +11,14 @@ final class SearchViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    @Published var ingredients: [String] = ["Chicken", "Potatoes", "Tomatoes"]
+    @Published var ingredients: [String] = []
     @Published var ingredientTextField: String = ""
+    
+    init() {
+        #if DEBUG
+        self.ingredients = ["Chicken", "Potatoes", "Tomatoes"]
+        #endif
+    }
     
     // MARK: - Functions
     
