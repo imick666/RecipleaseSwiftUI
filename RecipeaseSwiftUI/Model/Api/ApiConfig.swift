@@ -14,17 +14,19 @@ protocol APIConfig {
 
 extension APIConfig {
     
-    func encodedURL(queries: [String: String]) throws -> URL {
+    func encodedURL(queries: [String:String]) throws -> URL {
         guard var components = URLComponents(string: endpoint) else {
             throw URLError(.badURL)
         }
         
-        credential.forEach { components.queryItems?.append(URLQueryItem(name: $0.key, value: $0.value)) }
+        components.queryItems = credential.map { URLQueryItem(name: $0.key, value: $0.value) }
+        
         queries.forEach { components.queryItems?.append(URLQueryItem(name: $0.key, value: $0.value)) }
         
         guard let url = components.url else {
             throw URLError(.badURL)
         }
+        print(url)
         return url
     }
     

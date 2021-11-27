@@ -90,3 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 # ApiConfig
+RecipeaseSwiftUI/Model/Api/EdamamConfig.swift

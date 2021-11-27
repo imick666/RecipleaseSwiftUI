@@ -41,6 +41,7 @@ final class NetworkClient {
                     return output.data
                 }
                 .decode(type: EdamamDataModel.self, decoder: JSONDecoder())
+                .receive(on: DispatchQueue.main)
                 .eraseToAnyPublisher()
             
         } catch {
