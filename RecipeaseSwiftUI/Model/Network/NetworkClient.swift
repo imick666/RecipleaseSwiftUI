@@ -12,43 +12,28 @@ final class NetworkClient {
     
     // MARK: - Properties
     
-    private var apiConfig: APIConfig
     private var session: NetworkSession
     
     // MARK: - Init
     
-    init(apiConfig: APIConfig,
-         session: NetworkSession = NetworkService()) {
-        self.apiConfig = apiConfig
+    init(session: NetworkSession = NetworkService()) {
         self.session = session
         
     }
     
     // MARK: - Functions
     
-    func request(queryItems: [String: String]) -> AnyPublisher<EdamamDataModel, Error> {
-        do {
-            let url = try apiConfig.encodedURL(queries: queryItems)
-            
-            return session.request(url: url)
-                .tryMap { output in
-                    guard let response = output.response as? HTTPURLResponse else {
-                        throw URLError(.cannotConnectToHost)
-                    }
-                    guard response.statusCode == 200 else {
-                        throw URLError(.badServerResponse)
-                    }
-                    return output.data
-                }
-                .decode(type: EdamamDataModel.self, decoder: JSONDecoder())
-                .receive(on: DispatchQueue.main)
-                .eraseToAnyPublisher()
-            
-        } catch {
-            return Fail(outputType: EdamamDataModel.self, failure: error).eraseToAnyPublisher()
-        }
-        
-        
+    func request(for url: URL) -> AnyPublisher<Data, NetworkError> {
+        return session.request(url: url)
+            .tryMap { output in
+                guard let response = output.response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                          throw NetworkError.networkError
+                      }
+                return output.data
+            }
+            .mapError { NetworkError($0) }
+            .eraseToAnyPublisher()
     }
     
 }

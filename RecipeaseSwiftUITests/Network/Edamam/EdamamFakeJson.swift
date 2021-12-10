@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EdamamFakeData: FakeData {
+class EdamamFakeJson: FakeData {
     var fakeData: Data
     
     var fakeResponse: HTTPURLResponse
@@ -16,7 +16,7 @@ class EdamamFakeData: FakeData {
         self.fakeData = {
             switch data {
             case .good:
-                let bundle = Bundle(for: EdamamFakeData.self)
+                let bundle = Bundle(for: EdamamFakeJson.self)
                 let url = bundle.url(forResource: "EdamamData", withExtension: "json")!
                 return try! Data(contentsOf: url)
             case .bad: return "BadData".data(using: .utf8)!
@@ -31,7 +31,4 @@ class EdamamFakeData: FakeData {
         }()
         
     }
-    
-    
-    
 }

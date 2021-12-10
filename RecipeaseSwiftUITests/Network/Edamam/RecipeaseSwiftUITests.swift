@@ -11,77 +11,101 @@ import Combine
 
 class RecipeaseSwiftUITests: XCTestCase {
 
-    var client: NetworkClient?
+    var edamamClient: EdamamClient?
     
     override func tearDown() {
         super.tearDown()
-        client = nil
+        edamamClient = nil
     }
     
-    // MARK: - Tests
+    // MARK: - Test
     
     func testBadResponse() {
-        let fakeData = EdamamFakeData(data: .bad, response: .bad)
-        let session = FakeNetworkService(fakeData: fakeData)
-        client = NetworkClient(apiConfig: FakeApiConfig(), session: session)
+        
+        let service = FakeNetworkService(fakeData: EdamamFakeJson(data: .bad, response: .bad))
+        edamamClient = EdamamClient(networkService: service)
         
         let expectation = expectation(description: "Wait for response")
         
-        _ = client?.request(queryItems: [:])
+        _ = edamamClient?.fetchRecipes(for: [])
             .sink(receiveCompletion: { completion in
-                guard case .failure(let error) = completion else {
-                    XCTFail("No Error")
-                    expectation.fulfill()
-                    return
-                }
-                
-                XCTAssertEqual((error as! URLError).code, .badServerResponse)
+                guard case .failure(let error) = completion else { XCTFail("No Error"); return }
+                XCTAssertEqual(error, .networkError)
                 expectation.fulfill()
-            }, receiveValue: { _ in } )
+            }, receiveValue: { _ in })
         
         wait(for: [expectation], timeout: 0.01)
     }
     
     func testBadData() {
-        let fakeData = EdamamFakeData(data: .bad, response: .good)
-        let session = FakeNetworkService(fakeData: fakeData)
-        client = NetworkClient(apiConfig: FakeApiConfig(), session: session)
+        
+        let service = FakeNetworkService(fakeData: EdamamFakeJson(data: .bad, response: .good))
+        edamamClient = EdamamClient(networkService: service)
         
         let expectation = expectation(description: "Wait for response")
         
-        _ = client?.request(queryItems: [:])
+        _ = edamamClient?.fetchRecipes(for: [])
             .sink(receiveCompletion: { completion in
-                guard case .failure(let error) = completion else {
-                    XCTFail("No Error")
-                    expectation.fulfill()
-                    return
-                }
-                
-                XCTAssert(error is DecodingError)
+                guard case .failure(let error) = completion else { XCTFail("No Error"); return }
+                XCTAssertEqual(error, .jsonError)
                 expectation.fulfill()
-            }, receiveValue: { _ in } )
+            }, receiveValue: { _ in })
         
         wait(for: [expectation], timeout: 0.01)
     }
     
     func testGoodData() {
-        let fakeData = EdamamFakeData(data: .good, response: .good)
-        let session = FakeNetworkService(fakeData: fakeData)
-        client = NetworkClient(apiConfig: FakeApiConfig(), session: session)
+        
+        let service = FakeNetworkService(fakeData: EdamamFakeJson(data: .good, response: .good))
+        edamamClient = EdamamClient(networkService: service)
         
         let expectation = expectation(description: "Wait for response")
         
-        _ = client?.request(queryItems: [:])
+        _ = edamamClient?.fetchRecipes(for: [])
             .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error): XCTFail(error.localizedDescription); expectation.fulfill()
-                case .finished: expectation.fulfill()
-                }
-            }, receiveValue: { data in
-                XCTAssertEqual(data.hits[0].recipe.url, "http://www.seriouseats.com/recipes/2011/12/chicken-vesuvio-recipe.html")
-            } )
+                guard case .finished = completion else { XCTFail("Oups an error occured ..."); return }
+                expectation.fulfill()
+            }, receiveValue: { recipe in
+                XCTAssertEqual(recipe.recipes[1].detail.url, "http://norecipes.com/recipe/chicken-paprikash/")
+            })
         
         wait(for: [expectation], timeout: 0.01)
     }
     
+    func testFetchImageBadData() {
+        let service = FakeNetworkService(fakeData: EdamamFakeImage(data: .bad, response: .good))
+        edamamClient = EdamamClient(networkService: service)
+        
+        let expectation = expectation(description: "Wait for response")
+        
+        _ = edamamClient?.fetchImages(for: "BadUrlMotherFucker")
+            .sink(receiveCompletion: { completion in
+                guard case .failure(let error) = completion else { XCTFail("Ouos No Error...."); return }
+                XCTAssertEqual(error, .imageError)
+                expectation.fulfill()
+            }, receiveValue: { _ in })
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
+    
+    func testFetchImageGoodData() {
+        let service = FakeNetworkService(fakeData: EdamamFakeImage(data: .good, response: .good))
+        edamamClient = EdamamClient(networkService: service)
+        
+        let expectation = expectation(description: "Wait for response")
+        
+        _ = edamamClient?.fetchImages(for: "BadUrlMotherFucker")
+            .sink(receiveCompletion: { completion in
+                guard case .finished = completion else { XCTFail("Oupss there's an error..."); return }
+                expectation.fulfill()
+            }, receiveValue: { data in
+                let bundle = Bundle(for: EdamamFakeImage.self)
+                let url = bundle.url(forResource: "Image", withExtension: "jpg")!
+                let image = try! Data(contentsOf: url)
+                
+                XCTAssertEqual(data, image)
+            })
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
 }
