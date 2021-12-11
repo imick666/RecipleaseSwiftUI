@@ -24,7 +24,6 @@ struct EdamamDataModel: Codable {
         
         // MARK: - Recipe
         struct Detail: Codable {
-            let uri: String
             let label: String
             let image: String
             let source: String

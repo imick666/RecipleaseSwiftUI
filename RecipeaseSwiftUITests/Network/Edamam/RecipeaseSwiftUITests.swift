@@ -80,10 +80,9 @@ class RecipeaseSwiftUITests: XCTestCase {
         
         _ = edamamClient?.fetchImages(for: "BadUrlMotherFucker")
             .sink(receiveCompletion: { completion in
-                guard case .failure(let error) = completion else { XCTFail("Ouos No Error...."); return }
-                XCTAssertEqual(error, .imageError)
+                guard case .finished = completion else { XCTFail("WHAT...."); return }
                 expectation.fulfill()
-            }, receiveValue: { _ in })
+            }, receiveValue: { XCTAssertEqual($0, nil) })
         
         wait(for: [expectation], timeout: 0.01)
     }

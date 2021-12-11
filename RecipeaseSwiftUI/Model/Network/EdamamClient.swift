@@ -41,20 +41,16 @@ final class EdamamClient {
         }
     }
     
-    func fetchImages(for url: String) -> AnyPublisher<Data, NetworkError> {
+    func fetchImages(for url: String) -> AnyPublisher<Data?, Never> {
         guard let url = URL(string: url) else {
-            return Fail(outputType: Data.self, failure: NetworkError.networkError).eraseToAnyPublisher()
+            return Just(nil).eraseToAnyPublisher()
         }
         
         return networkClient.request(for: url)
-            .tryMap { data in
-                if UIImage(data: data) != nil {
-                    return data
-                } else {
-                    throw NetworkError.imageError
-                }
+            .map {
+                (UIImage(data: $0) != nil) ? $0 : nil
             }
-            .mapError { NetworkError($0) }
+            .replaceError(with: nil)
             .eraseToAnyPublisher()
     }
     
