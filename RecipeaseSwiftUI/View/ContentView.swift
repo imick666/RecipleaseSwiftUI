@@ -9,10 +9,6 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    
-    init() {
-        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "Lightgrey")
-    }
 
     var body: some View {
         TabView {
