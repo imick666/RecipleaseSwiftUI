@@ -10,7 +10,7 @@ import Combine
 
 final class RecipeListViewModel: ObservableObject {
     
-    @Published var recipes: [RecipeCellViewModel] = []
+    @Published var recipes: [RecipeViewModel] = []
     @Published var isLoading = true
     
     private lazy var networkClient = EdamamClient()
@@ -19,7 +19,7 @@ final class RecipeListViewModel: ObservableObject {
     init(ingredients: [String]) {
         networkClient.fetchRecipes(for: ingredients)
             .receive(on: DispatchQueue.main)
-            .map { $0.recipes.map { RecipeCellViewModel(recipe: $0.detail) } }
+            .map { $0.recipes.map { RecipeViewModel($0) } }
             .sink { completion in
                 switch completion {
                 case .finished: self.isLoading = false
@@ -33,7 +33,7 @@ final class RecipeListViewModel: ObservableObject {
     
     #if DEBUG
     init() {
-        self.recipes = EdamamDataModel.sampleData.recipes.map { RecipeCellViewModel(recipe: $0.detail) }
+        self.recipes = RecipeViewModel.preview
     }
     #endif
 }

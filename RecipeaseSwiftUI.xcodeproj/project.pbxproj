@@ -19,7 +19,6 @@
 		E02D551127528B1D00051C34 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D551027528B1D00051C34 /* RecipesListView.swift */; };
 		E02D551327528B2E00051C34 /* RecipesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D551227528B2E00051C34 /* RecipesListViewModel.swift */; };
 		E02D551527528B3D00051C34 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D551427528B3D00051C34 /* RecipeCellView.swift */; };
-		E02D551727528B4700051C34 /* RecipeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D551627528B4700051C34 /* RecipeCellViewModel.swift */; };
 		E04119C4274B832400848D2E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04119C3274B832400848D2E /* SearchView.swift */; };
 		E04119C8274B91AA00848D2E /* Color+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04119C7274B91AA00848D2E /* Color+Init.swift */; };
 		E0493D8E2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493D8D2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift */; };
@@ -36,6 +35,8 @@
 		E04C4A4A276380FA000ECE45 /* EdamamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A49276380FA000ECE45 /* EdamamClient.swift */; };
 		E04C4A4C27638804000ECE45 /* EdamamFakeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A4B27638804000ECE45 /* EdamamFakeImage.swift */; };
 		E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A4F27638DE6000ECE45 /* NetworkError.swift */; };
+		E04C4A5227650089000ECE45 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A5127650089000ECE45 /* RecipeView.swift */; };
+		E04C4A56276503FC000ECE45 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A55276503FC000ECE45 /* RecipeViewModel.swift */; };
 		E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */; };
 		E0BB9F94276123CE008FD8BE /* Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0BB9F93276123CE008FD8BE /* Image.jpg */; };
 		E0FA68582754E6950081EBCE /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E0FA68572754E6920081EBCE /* EdamamData.json */; };
@@ -73,7 +74,6 @@
 		E02D551027528B1D00051C34 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		E02D551227528B2E00051C34 /* RecipesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewModel.swift; sourceTree = "<group>"; };
 		E02D551427528B3D00051C34 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
-		E02D551627528B4700051C34 /* RecipeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellViewModel.swift; sourceTree = "<group>"; };
 		E04119C3274B832400848D2E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E04119C7274B91AA00848D2E /* Color+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Init.swift"; sourceTree = "<group>"; };
 		E0493D8A2742936700BE2BA1 /* RecipeaseSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeaseSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +93,8 @@
 		E04C4A49276380FA000ECE45 /* EdamamClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamClient.swift; sourceTree = "<group>"; };
 		E04C4A4B27638804000ECE45 /* EdamamFakeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamFakeImage.swift; sourceTree = "<group>"; };
 		E04C4A4F27638DE6000ECE45 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E04C4A5127650089000ECE45 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		E04C4A55276503FC000ECE45 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E0BB9F93276123CE008FD8BE /* Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.jpg; sourceTree = "<group>"; };
 		E0FA68572754E6920081EBCE /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				E04119C3274B832400848D2E /* SearchView.swift */,
 				E02D551027528B1D00051C34 /* RecipesListView.swift */,
 				E02D551427528B3D00051C34 /* RecipeCellView.swift */,
+				E04C4A5127650089000ECE45 /* RecipeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,9 +269,9 @@
 		E0493DBF2742939D00BE2BA1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E04C4A55276503FC000ECE45 /* RecipeViewModel.swift */,
 				E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */,
 				E02D551227528B2E00051C34 /* RecipesListViewModel.swift */,
-				E02D551627528B4700051C34 /* RecipeCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -438,13 +441,14 @@
 				E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */,
 				E02D551527528B3D00051C34 /* RecipeCellView.swift in Sources */,
 				E02D551327528B2E00051C34 /* RecipesListViewModel.swift in Sources */,
-				E02D551727528B4700051C34 /* RecipeCellViewModel.swift in Sources */,
 				E0493D972742936800BE2BA1 /* Persistence.swift in Sources */,
 				E02D5506275277C000051C34 /* NetworkService.swift in Sources */,
+				E04C4A5227650089000ECE45 /* RecipeView.swift in Sources */,
 				E0277C48274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */,
 				E0493D9A2742936800BE2BA1 /* RecipeaseSwiftUI.xcdatamodeld in Sources */,
 				E0493D902742936700BE2BA1 /* ContentView.swift in Sources */,
 				E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */,
+				E04C4A56276503FC000ECE45 /* RecipeViewModel.swift in Sources */,
 				E0493D8E2742936700BE2BA1 /* RecipeaseSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

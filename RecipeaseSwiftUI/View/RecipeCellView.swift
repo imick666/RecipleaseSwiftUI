@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeCellView: View {
     
-    @ObservedObject var viewModel: RecipeCellViewModel
+    @ObservedObject var viewModel: RecipeViewModel
     
     var body: some View {
         
@@ -37,7 +37,7 @@ struct RecipeCellView: View {
             }
             
             HStack {
-                Text(viewModel.name)
+                Text(viewModel.title)
                     .font(.title3)
                     .lineLimit(0)
                 
