@@ -15,9 +15,6 @@ struct SearchView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("ReciPlease")
-                        .font(.custom("Chalkduster", size: 26))
-                        .foregroundColor(.white)
                     
                     VStack {
                         Text("What's in your fridge?")
@@ -48,11 +45,10 @@ struct SearchView: View {
                     .padding()
                     .background(Color.white)
                     
-                    Divider()
-                    
                     VStack(spacing: 0) {
                         HStack {
                             Text("Your ingredients :")
+                                .font(.custom("Chalkduster", size: 20))
                             
                             Spacer()
                             
@@ -61,31 +57,42 @@ struct SearchView: View {
                             }
                             .buttonStyle(RoundedRectangleButtonStyle(color: .lightGrey))
                         }
-                        .padding(.horizontal)
+                        .padding()
                         
-                        
-                        ScrollView(.vertical, showsIndicators: false) {
-                            VStack {
-                                ForEach(Array(viewModel.ingredients.enumerated()), id: \.offset) { index, ingredient in
-                                    HStack {
-                                        Text("- " + ingredient)
-                                            
-                                        
-                                        Spacer()
-                                        
-                                        Button {
-                                            self.viewModel.deleteIngredient(for: index)
-                                        } label: {
-                                            Image(systemName: "x.circle")
-                                        }
-                                        
-                                    }
-                                    .padding()
-                                }
-                            }
+                        if viewModel.ingredients.isEmpty {
+                            Text("Please add some ingredients for begin")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .padding(.bottom, 75)
+                                .padding()
+                                .multilineTextAlignment(.center)
+                        } else {
                             
+                            ScrollView(.vertical, showsIndicators: false) {
+                                VStack {
+                                    ForEach(Array(viewModel.ingredients.enumerated()), id: \.offset) { index, ingredient in
+                                        HStack {
+                                            Text("- " + ingredient)
+
+
+                                            Spacer()
+
+                                            Button {
+                                                self.viewModel.deleteIngredient(for: index)
+                                            } label: {
+                                                Image(systemName: "x.circle")
+                                            }
+
+                                        }
+                                        .padding()
+                                    }
+                                    
+                                    Spacer(minLength: 75)
+                                }
+
+                            }
                         }
                         
+
                     }
                     .font(.custom("Chalkduster", size: 16))
                     .foregroundColor(.white)
@@ -95,21 +102,27 @@ struct SearchView: View {
                     
                     Spacer()
                     
-                    Button("Search for recipes") {
-                        
+                    NavigationLink(isActive: $viewModel.showResult) {
+                        RecipesListView(viewModel: .init(ingredients: viewModel.ingredients))
+                    } label: {
+                        Text("Search for recipes")
                     }
-                    .buttonStyle(LargeRoundedRectangleButtonStyle(color: .green))
+                    .buttonStyle(RoundedRectangleButtonStyle(color: .green).large())
                     .padding()
-                    
+                    .disabled(viewModel.ingredients.isEmpty)
                     
                 }
+                
+                
+
             }
-            .navigationBarHidden(true)
+            .navigationBarTitle("Reciplease")
             .background(Color(.darkGrey).edgesIgnoringSafeArea(.all))
             
         }
         
     }
+    
 }
 
 struct ShearchView_Previews: PreviewProvider {

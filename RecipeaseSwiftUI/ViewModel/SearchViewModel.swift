@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class SearchViewModel: ObservableObject {
     
@@ -13,8 +14,10 @@ final class SearchViewModel: ObservableObject {
     
     @Published var ingredients: [String] = []
     @Published var ingredientTextField: String = ""
+    @Published var showResult = false
     
     init() {
+        
         #if DEBUG
         self.ingredients = ["Chicken", "Potatoes", "Tomatoes"]
         #endif
@@ -39,10 +42,6 @@ final class SearchViewModel: ObservableObject {
     
     func clearIngredients() {
         ingredients = []
-    }
-    
-    func searchForRecipes() {
-        
     }
     
 }

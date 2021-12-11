@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0277C46274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0277C45274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift */; };
-		E0277C48274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */; };
+		E0277C48274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0277C47274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift */; };
 		E02D54FA2752708B00051C34 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54F92752708B00051C34 /* NetworkClient.swift */; };
 		E02D54FC275271A500051C34 /* EdamanDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54FB275271A500051C34 /* EdamanDataModel.swift */; };
-		E02D54FE275272CE00051C34 /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E02D54FD275272CE00051C34 /* EdamamData.json */; };
 		E02D55002752732E00051C34 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D54FF2752732E00051C34 /* FakeData.swift */; };
-		E02D55022752742200051C34 /* EdamamFakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55012752742200051C34 /* EdamamFakeData.swift */; };
+		E02D55022752742200051C34 /* EdamamFakeJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55012752742200051C34 /* EdamamFakeJson.swift */; };
 		E02D55042752767D00051C34 /* FakeApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55032752767D00051C34 /* FakeApiConfig.swift */; };
-		E02D5506275277C000051C34 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D5505275277C000051C34 /* NetworkSession.swift */; };
+		E02D5506275277C000051C34 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D5505275277C000051C34 /* NetworkService.swift */; };
 		E02D55082752796C00051C34 /* FakeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D55072752796C00051C34 /* FakeNetworkService.swift */; };
 		E02D550F275289D600051C34 /* EdamamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D550E275289D600051C34 /* EdamamConfig.swift */; };
 		E02D551127528B1D00051C34 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D551027528B1D00051C34 /* RecipesListView.swift */; };
@@ -35,8 +33,13 @@
 		E0493DB02742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493DAF2742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift */; };
 		E0493DBD2742938D00BE2BA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E0493DBC2742938D00BE2BA1 /* .gitignore */; };
 		E0493DC3274293CC00BE2BA1 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */; };
-		E089246027529486005767A0 /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E089245F275292DD005767A0 /* EdamamData.json */; };
+		E04C4A4A276380FA000ECE45 /* EdamamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A49276380FA000ECE45 /* EdamamClient.swift */; };
+		E04C4A4C27638804000ECE45 /* EdamamFakeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A4B27638804000ECE45 /* EdamamFakeImage.swift */; };
+		E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A4F27638DE6000ECE45 /* NetworkError.swift */; };
 		E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */; };
+		E0BB9F94276123CE008FD8BE /* Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0BB9F93276123CE008FD8BE /* Image.jpg */; };
+		E0FA68582754E6950081EBCE /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E0FA68572754E6920081EBCE /* EdamamData.json */; };
+		E0FA68592754E6990081EBCE /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E02D54FD275272CE00051C34 /* EdamamData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E0277C45274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
-		E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeRoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		E0277C47274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		E02D54F92752708B00051C34 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		E02D54FB275271A500051C34 /* EdamanDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamanDataModel.swift; sourceTree = "<group>"; };
 		E02D54FD275272CE00051C34 /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
 		E02D54FF2752732E00051C34 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
-		E02D55012752742200051C34 /* EdamamFakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamFakeData.swift; sourceTree = "<group>"; };
+		E02D55012752742200051C34 /* EdamamFakeJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamFakeJson.swift; sourceTree = "<group>"; };
 		E02D55032752767D00051C34 /* FakeApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiConfig.swift; sourceTree = "<group>"; };
-		E02D5505275277C000051C34 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		E02D5505275277C000051C34 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E02D55072752796C00051C34 /* FakeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkService.swift; sourceTree = "<group>"; };
 		E02D550E275289D600051C34 /* EdamamConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamConfig.swift; sourceTree = "<group>"; };
 		E02D551027528B1D00051C34 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
@@ -88,8 +90,12 @@
 		E0493DAF2742936900BE2BA1 /* RecipeaseSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeaseSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0493DBC2742938D00BE2BA1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
-		E089245F275292DD005767A0 /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
+		E04C4A49276380FA000ECE45 /* EdamamClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamClient.swift; sourceTree = "<group>"; };
+		E04C4A4B27638804000ECE45 /* EdamamFakeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamFakeImage.swift; sourceTree = "<group>"; };
+		E04C4A4F27638DE6000ECE45 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E0BB9F93276123CE008FD8BE /* Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.jpg; sourceTree = "<group>"; };
+		E0FA68572754E6920081EBCE /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +126,7 @@
 		E0277C44274D3A2D00A4D2BE /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
-				E0277C45274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift */,
-				E0277C47274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift */,
+				E0277C47274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift */,
 			);
 			path = ButtonStyle;
 			sourceTree = "<group>";
@@ -129,8 +134,10 @@
 		E02D5509275286D300051C34 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E02D5505275277C000051C34 /* NetworkSession.swift */,
+				E02D5505275277C000051C34 /* NetworkService.swift */,
 				E02D54F92752708B00051C34 /* NetworkClient.swift */,
+				E04C4A49276380FA000ECE45 /* EdamamClient.swift */,
+				E04C4A4F27638DE6000ECE45 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -138,10 +145,10 @@
 		E02D550A275286DD00051C34 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				E089245F275292DD005767A0 /* EdamamData.json */,
+				E0FA68572754E6920081EBCE /* EdamamData.json */,
 				E0493DC2274293CC00BE2BA1 /* ApiConfig.swift */,
-				E02D54FB275271A500051C34 /* EdamanDataModel.swift */,
 				E02D550E275289D600051C34 /* EdamamConfig.swift */,
+				E02D54FB275271A500051C34 /* EdamanDataModel.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -159,9 +166,11 @@
 		E02D550C275286FD00051C34 /* Edamam */ = {
 			isa = PBXGroup;
 			children = (
-				E02D55012752742200051C34 /* EdamamFakeData.swift */,
+				E0BB9F93276123CE008FD8BE /* Image.jpg */,
+				E02D55012752742200051C34 /* EdamamFakeJson.swift */,
 				E0493DA32742936900BE2BA1 /* RecipeaseSwiftUITests.swift */,
 				E02D54FD275272CE00051C34 /* EdamamData.json */,
+				E04C4A4B27638804000ECE45 /* EdamamFakeImage.swift */,
 			);
 			path = Edamam;
 			sourceTree = "<group>";
@@ -390,7 +399,7 @@
 			files = (
 				E0493D952742936800BE2BA1 /* Preview Assets.xcassets in Resources */,
 				E0493DBD2742938D00BE2BA1 /* .gitignore in Resources */,
-				E089246027529486005767A0 /* EdamamData.json in Resources */,
+				E0FA68582754E6950081EBCE /* EdamamData.json in Resources */,
 				E0493D922742936800BE2BA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +408,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E02D54FE275272CE00051C34 /* EdamamData.json in Resources */,
+				E0FA68592754E6990081EBCE /* EdamamData.json in Resources */,
+				E0BB9F94276123CE008FD8BE /* Image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,18 +429,19 @@
 			files = (
 				E02D54FA2752708B00051C34 /* NetworkClient.swift in Sources */,
 				E04119C4274B832400848D2E /* SearchView.swift in Sources */,
-				E0277C46274D3A5E00A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */,
 				E04119C8274B91AA00848D2E /* Color+Init.swift in Sources */,
 				E0493DC3274293CC00BE2BA1 /* ApiConfig.swift in Sources */,
+				E04C4A4A276380FA000ECE45 /* EdamamClient.swift in Sources */,
 				E02D54FC275271A500051C34 /* EdamanDataModel.swift in Sources */,
 				E02D550F275289D600051C34 /* EdamamConfig.swift in Sources */,
 				E02D551127528B1D00051C34 /* RecipesListView.swift in Sources */,
+				E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */,
 				E02D551527528B3D00051C34 /* RecipeCellView.swift in Sources */,
 				E02D551327528B2E00051C34 /* RecipesListViewModel.swift in Sources */,
 				E02D551727528B4700051C34 /* RecipeCellViewModel.swift in Sources */,
 				E0493D972742936800BE2BA1 /* Persistence.swift in Sources */,
-				E02D5506275277C000051C34 /* NetworkSession.swift in Sources */,
-				E0277C48274D3D6500A4D2BE /* LargeRoundedRectangleButtonStyle.swift in Sources */,
+				E02D5506275277C000051C34 /* NetworkService.swift in Sources */,
+				E0277C48274D3D6500A4D2BE /* RoundedRectangleButtonStyle.swift in Sources */,
 				E0493D9A2742936800BE2BA1 /* RecipeaseSwiftUI.xcdatamodeld in Sources */,
 				E0493D902742936700BE2BA1 /* ContentView.swift in Sources */,
 				E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */,
@@ -444,7 +455,8 @@
 			files = (
 				E0493DA42742936900BE2BA1 /* RecipeaseSwiftUITests.swift in Sources */,
 				E02D55042752767D00051C34 /* FakeApiConfig.swift in Sources */,
-				E02D55022752742200051C34 /* EdamamFakeData.swift in Sources */,
+				E02D55022752742200051C34 /* EdamamFakeJson.swift in Sources */,
+				E04C4A4C27638804000ECE45 /* EdamamFakeImage.swift in Sources */,
 				E02D55002752732E00051C34 /* FakeData.swift in Sources */,
 				E02D55082752796C00051C34 /* FakeNetworkService.swift in Sources */,
 			);
