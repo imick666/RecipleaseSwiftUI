@@ -16,6 +16,9 @@ final class RecipeViewModel: ObservableObject, Identifiable {
     @Published private(set) var image: Data? = nil
     private(set) var time: String = ""
     private(set) var yield: String = ""
+    private(set) var url: URL
+    private(set) var source: String
+    private(set) var isStored = false
     
     private lazy var network = EdamamClient()
     private var subscriptions = Set<AnyCancellable>()
@@ -27,6 +30,8 @@ final class RecipeViewModel: ObservableObject, Identifiable {
         self.ingredients = recipe.ingredientLines
         self.time = "\(recipe.totalTime)"
         self.yield = "\(recipe.yield)"
+        self.url = URL(string: recipe.url)!
+        self.source = recipe.source
         
         network.fetchImages(for: recipe.image)
             .receive(on: DispatchQueue.main)

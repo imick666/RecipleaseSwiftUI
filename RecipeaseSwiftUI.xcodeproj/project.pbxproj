@@ -37,6 +37,7 @@
 		E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A4F27638DE6000ECE45 /* NetworkError.swift */; };
 		E04C4A5227650089000ECE45 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A5127650089000ECE45 /* RecipeView.swift */; };
 		E04C4A56276503FC000ECE45 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A55276503FC000ECE45 /* RecipeViewModel.swift */; };
+		E04C4A5827651501000ECE45 /* View+CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C4A5727651501000ECE45 /* View+CGRect.swift */; };
 		E0AD60D3274D15FE0092CBCB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */; };
 		E0BB9F94276123CE008FD8BE /* Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0BB9F93276123CE008FD8BE /* Image.jpg */; };
 		E0FA68582754E6950081EBCE /* EdamamData.json in Resources */ = {isa = PBXBuildFile; fileRef = E0FA68572754E6920081EBCE /* EdamamData.json */; };
@@ -95,6 +96,7 @@
 		E04C4A4F27638DE6000ECE45 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E04C4A5127650089000ECE45 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		E04C4A55276503FC000ECE45 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		E04C4A5727651501000ECE45 /* View+CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CGRect.swift"; sourceTree = "<group>"; };
 		E0AD60D2274D15FE0092CBCB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E0BB9F93276123CE008FD8BE /* Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.jpg; sourceTree = "<group>"; };
 		E0FA68572754E6920081EBCE /* EdamamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EdamamData.json; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E04119C7274B91AA00848D2E /* Color+Init.swift */,
+				E04C4A5727651501000ECE45 /* View+CGRect.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				E04C4A4A276380FA000ECE45 /* EdamamClient.swift in Sources */,
 				E02D54FC275271A500051C34 /* EdamanDataModel.swift in Sources */,
 				E02D550F275289D600051C34 /* EdamamConfig.swift in Sources */,
+				E04C4A5827651501000ECE45 /* View+CGRect.swift in Sources */,
 				E02D551127528B1D00051C34 /* RecipesListView.swift in Sources */,
 				E04C4A5027638DE6000ECE45 /* NetworkError.swift in Sources */,
 				E02D551527528B3D00051C34 /* RecipeCellView.swift in Sources */,

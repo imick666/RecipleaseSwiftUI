@@ -34,6 +34,7 @@ final class RecipeListViewModel: ObservableObject {
     #if DEBUG
     init() {
         self.recipes = RecipeViewModel.preview
+        self.isLoading = false
     }
     #endif
 }

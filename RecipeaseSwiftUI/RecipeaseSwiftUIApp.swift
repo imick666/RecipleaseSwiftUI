@@ -28,7 +28,7 @@ struct RecipeaseSwiftUIApp: App {
         
         appearance.largeTitleTextAttributes = [
             .foregroundColor: UIColor.white,
-            .font: UIFont(name: "Chalkduster", size: 36)!,
+            .font: UIFont(name: "Chalkduster", size: 26)!,
         ]
         
         appearance.barStyle = UIBarStyle.black
